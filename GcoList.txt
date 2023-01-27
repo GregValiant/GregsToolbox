@@ -1,0 +1,434 @@
+   Please visit "https://marlinfw.org/meta/gcode/"
+   for full descriptions and parameters.
+G0: Linear Move
+G1: Linear Move
+G2: Arc or Circcle
+G3: Arc or Circle
+G4: Dwell
+G5: Bézier cubic spline
+G10: Retract
+G11: Recover
+G12: Clean the Nozzle
+G17-G18: CNC Workspace Planes
+G20: Inch Units
+G21: Millimeter Units
+G26: Mesh Validation Pattern
+G27: Park toolhead
+G28: Auto Home
+G29: Bed Leveling
+G29: Bed Leveling (3-Point)
+G29: Bed Leveling (Linear)
+G29: Bed Leveling (Manual)
+G29: Bed Leveling (Bilinear)
+G29: Bed Leveling (Unified)
+G30: Single Z-Probe
+G31: Dock Sled
+G32: Undock Sled
+G33: Delta Auto Calibration
+G34: Z Steppers Auto-Alignment
+G35: Tramming Assistant
+G38.2-G38.3: Probe target
+G42: Move to mesh coordinate
+G53: Move in Machine Coordinates
+G54-G55: Workspace Coordinate System
+G60: Save Current Position
+G61: Return to Saved Position
+G76: Probe temperature calibration
+REPRAP G80: Cancel Canned Cycle (CNC specific)
+REPRAP G80: Mesh-based Z probe
+REPRAP G81: Mesh bed leveling status
+REPRAP G82: Single Z probe at current location
+REPRAP G83: Babystep in Z and store to EEPROM
+REPRAP G84: UNDO Babystep Z (move Z axis back)
+REPRAP G85: Pick best babystep
+REPRAP G86: Disable babystep correction after home
+REPRAP G87: Enable babystep correction after home
+REPRAP G88: Reserved
+G90: Absolute Positioning
+G91: Relative Positioning
+G92: Set Position
+REPRAP G93: Feed Rate Mode (Inverse Time Mode) (CNC specific)
+REPRAP G94: Feed Rate Mode (Units per Minute) (CNC specific)
+REPRAP G98: Activate farm mode
+REPRAP G99: Deactivate farm mode
+REPRAP G100: Calibrate floor or rod radius
+REPRAP G130: Set digital potentiometer value
+REPRAP G131: Remove offset
+REPRAP G132: Calibrate endstop offsets
+REPRAP G133: Measure steps to top
+REPRAP G161: Home axes to minimum
+REPRAP G162: Home axes to maximum
+G425: Perform auto-calibration with calibration cube
+
+M0: Stop or Unconditional stop
+M1; Sleep or Conditional stop
+REPRAP M2; Program End
+M3: Spindle CW / Laser On
+M4: Spindle CCW / Laser On
+M5: Spindle / Laser Off
+REPRAP M6: Tool change
+M7: Mist Coolant On (CNC specific)
+M8: Flood Coolant On (CNC specific)
+REPRAP M9: Coolant Off (CNC specific)
+REPRAP M10: Vacuum On (CNC specific)
+REPRAP M11: Vacuum Off (CNC specific)
+REPRAP M13: Spindle on (clockwise rotation) and coolant on (flood)
+M16: Expected Printer Check
+M17: Enable Steppers
+M18: Disable steppers
+M20: List SD Card
+M21: Init SD card
+M22: Release SD card
+M23: Select SD file
+M24: Start or Resume SD print
+M25: Pause SD print
+M26: Set SD position
+M27: Report SD print status
+M28: Start SD write
+M29: Stop SD write
+M30: Delete SD file
+M31: Print time
+M32: Select and Start
+M33: Get Long Path
+M34: SDCard Sorting
+REPRAP M34: Set SD file sorting options
+REPRAP M35: Upload firmware NEXTION from SD
+REPRAP M36: Return file information
+REPRAP M37: Simulation mode
+REPRAP M38 Compute SHA1 hash of target file
+REPRAP M39 Report SD card information
+REPRAP M40: Eject
+REPRAP M41: Loop
+M42: Set Pin State
+M43: Debug Pins
+M43 T: Toggle Pins
+REPRAP M44: Codes debug - report codes available
+REPRAP M44: Reset the bed skew and offset calibration
+REPRAP M45: Bed skew and offset with manual Z up
+REPRAP M46: Show the assigned IP address
+REPRAP M47: Show end stops dialog on the display
+M48: Probe Accuracy Test
+REPRAP M49: Set G26 debug flag
+REPRAP M70: Display message
+REPRAP M72: Play a tone or song
+M73: Set Print Progress
+M75: Start Print Job Timer
+M76: Pause Print Job
+M77: Stop Print Job Timer
+M78: Print Job Stats
+M80: Power On
+M81: Power Off
+M82: E Absolute
+M83: E Relative
+M84; Same as M18 - Disable Steppers
+M85: Inactivity Shutdown - Stepper timer
+REPRAP M86: Set Safety Timer expiration time
+M92: Set Axis Steps-per-unit
+REPRAP M93: Send axis_steps_per_unit
+REPRAP M98: Call Macro/Subprogram
+REPRAP M99: Return from Macro/Subprogram
+M100: Free Memory
+REPRAP M101: Turn extruder 1 on (Forward), Undo Retraction
+REPRAP M102: Turn extruder 1 on (Reverse)
+REPRAP M103: Turn all extruders off, Extruder Retraction
+M104: Set Hotend Temperature
+M105: Report Temperatures
+M106: Set Fan Speed
+M107: Fan Off
+M108: Break and Continue or Cancel Heating or Set Extruder Speed
+M109: Wait for Hotend Temperature
+M110: Set Line Number
+M111: Debug Level
+M112: Emergency Stop
+M113: Host Keepalive
+M114: Get Current Position
+M115: Firmware Info
+M117: Set LCD Message
+M118: Serial print
+M119: Endstop States
+M120: Enable Endstops
+M121: Disable Endstops
+M122: TMC Debugging
+REPRAP M123: Firmware dependent
+	M123: Tachometer value (RepRap)
+	M123: Endstop Logic (MK4duo)
+REPRAP M124: Firmware dependent
+	M124: Immediate motor stop
+	M124: Set Endstop Pullup
+M125: Park Head
+M126: Baricuda 1 Open
+M127: Baricuda 1 Close
+M128: Baricuda 2 Open
+M129: Baricuda 2 Close
+REPRAP M130: Set PID P value
+REPRAP M131: Set PID I value
+REPRAP M132: Set PID D value
+	M132 in MakerBot
+REPRAP M133: Set PID I limit value
+	M133 in MakerBot
+REPRAP M134: Write PID values to EEPROM
+	M134 in MakerBot
+REPRAP M135: Set PID sample interval
+	M135 in MakerBot
+REPRAP M136: Print PID settings to host
+M140: Set Bed Temperature
+M141: Set Chamber Temperature
+REPRAP M142: Firmware dependent
+	M142: Holding Pressure
+	M142: Set Cooler Temperature (Fast)
+REPRAP M143: Maximum heater temperature
+REPRAP M144: Bed Standby
+M145: Set Material Preset
+REPRAP M146; Bed Standby
+M149: Set Temperature Units
+M150: Set RGB(W) Color
+M155: Temperature Auto-Report
+REPRAP M160: Number of mixed materials
+M163: Set Mix Factor
+M164: Save Mix
+M165: Set Mix
+M166: Gradient Mix
+M190: Wait for Bed Temperature
+M191: Wait for Chamber Temperature
+M192: Wait for Probe temperature
+M200: Set Filament Diameter
+M201: Set Print Max Acceleration
+REPRAP M202: Set max travel acceleration
+M203: Set Max Feedrate
+M204: Set Starting Acceleration
+M205: Set Advanced Settings
+M206: Set Home Offsets
+M207: Set Firmware Retraction
+M208: Firmware Recover
+M209: Set Auto Retract
+REPRAP M210; Set Homing Feedrates
+M211: Software Endstops
+REPRAP M212: Set Bed Level Sensor Offset
+M217: Filament swap parameters
+M218: Set Hotend Offset
+M220: Set Feedrate Percentage
+REPRAP M220: Turn off AUX V1.0.5
+M221: Set Flow Percentage
+REPRAP M221: Turn on AUX V1.0.5
+REPRAP M222: Set speed of fast XY moves
+REPRAP M223: Set speed of fast Z moves
+REPRAP M224: Enable extruder during fast moves
+REPRAP M225: Disable on extruder during fast moves
+M226: Wait for Pin State
+REPRAP M227: Enable Automatic Reverse and Prime
+REPRAP M228: Disable Automatic Reverse and Prime
+REPRAP M229: Enable Automatic Reverse and Prime
+REPRAP M230: Disable / Enable Wait for Temperature Change
+REPRAP M231: Set OPS parameter
+REPRAP M232: Read and reset max. advance values
+M240: Trigger Camera
+REPRAP M241: Stop conveyor belt motor / echo on
+REPRAP M245: Start cooler
+REPRAP M246: Stop cooler
+M250: LCD Contrast
+REPRAP M251: Measure Z steps from homing stop (Delta printers)
+M260: I2C Send
+M261: I2C Request
+M280: Servo Position
+M281: Edit Servo Angles
+M290: Babystep
+REPRAP M291: Display message and optionally wait for response
+REPRAP M292: Acknowledge message
+M300: Play Tone
+M301: Set Hotend PID
+M302: Cold Extrude
+M303: PID autotune
+M304: Set Bed PID
+REPRAP M305: Set thermistor and ADC parameters
+REPRAP M306: Set home offset calculated from toolhead position
+REPRAP M307: Set or report heating process parameters
+REPRAP M308: Set or report sensor parameters
+REPRAP M320: Activate autolevel (Repetier)
+REPRAP M321: Deactivate autolevel (Repetier)
+REPRAP M322: Reset autolevel matrix (Repetier)
+REPRAP M323: Distortion correction on/off (Repetier)
+REPRAP M340: Control the servos
+M350: Set micro-stepping
+M351: Set Microstep Pins
+M355: Case Light Control
+M360: SCARA Theta A
+M361: SCARA Theta-B
+M362: SCARA Psi-A
+M363: SCARA Psi-B
+M364: SCARA Psi-C
+REPRAP M365: SCARA scaling factor
+REPRAP M366: SCARA convert trim
+REPRAP M370: Morgan manual bed level - clear map
+REPRAP M371: Move to next calibration position
+REPRAP M372: Record calibration value, and move to next position
+REPRAP M373: End bed level calibration mode
+REPRAP M374: Save calibration grid
+REPRAP M375: Display matrix / Load Matrix
+REPRAP M376: Set bed compensation taper
+M380: Activate Solenoid
+M381: Deactivate Solenoids
+M400: Finish Moves
+M401: Deploy Probe
+M402: Stow Probe
+M403: MMU2 Filament Type
+M404: Set Filament Diameter
+M405: Filament Width Sensor On
+M406: Filament Width Sensor Off
+M407: Filament Width
+REPRAP M408: Report JSON-style response
+REPRAP M409: Query object model
+M410: Quickstop
+M412: Filament Runout
+M413: Power-loss Recovery
+REPRAP M415: Host Rescue
+REPRAP M416: Power loss
+M420: Bed Leveling State
+M421: Set Mesh Value
+M422: Set Z Motor XY
+M425: Backlash compensation
+M428: Home Offsets Here
+REPRAP M450: Report Printer Mode
+REPRAP M451: Select FFF Printer Mode
+REPRAP M452: Select Laser Printer Mode
+REPRAP M453: Select CNC Printer Mode
+REPRAP M460: Define temperature range for thermistor-controlled fan
+REPRAP M470: Create Directory on SD-Card
+REPRAP M471: Rename File/Directory on SD-Card
+M486: Cancel Objects
+M500: Save Settings
+M501: Restore Settings
+M502: Factory Reset
+M503: Report Settings
+M504: Validate EEPROM contents
+REPRAP M505: Firmware dependent
+	M505: Clear EEPROM and RESET Printer
+	M505: Set configuration file folder
+REPRAP M509: Force language selection
+M524: Abort SD print
+REPRAP M530: Enable printing mode
+REPRAP M531: Set print name
+REPRAP M532: Set print progress
+M540: Endstops Abort SD
+REPRAP M540: Set MAC address
+REPRAP M550: Set Name
+REPRAP M551: Set Password
+REPRAP M552: Set IP address, enable/disable network interface
+REPRAP M553: Set Netmask
+REPRAP M554: Set Gateway
+REPRAP M555: Set compatibility
+REPRAP M556: Axis compensation
+REPRAP M557: Set Z probe point or define probing grid
+REPRAP M558: Set Z probe type
+REPRAP M559: Upload configuration file
+REPRAP M560: Upload web page file
+REPRAP M561: Set Identity Transform
+REPRAP M562: Reset temperature fault
+REPRAP M563: Define or remove a tool
+REPRAP M564: Limit axes
+REPRAP M565: Set Z probe offset
+REPRAP M566: Set allowable instantaneous speed change
+REPRAP M567: Set tool mix ratios
+REPRAP M568: Turn off/on tool mix ratios (obsolete)
+M569: Set TMC stepping mode
+REPRAP M570: Configure heater fault detection
+REPRAP M571: Set output on extrude
+REPRAP M572: Set or report extruder pressure advance
+REPRAP M573: Report heater PWM
+REPRAP M574: Set endstop configuration
+M575: Serial baud rate
+REPRAP M577: Wait until endstop is triggered
+REPRAP M578: Fire inkjet bits
+REPRAP M579: Scale Cartesian axes
+REPRAP M580: Select Roland
+REPRAP M581: Configure external trigger
+REPRAP M582: Check external trigger
+REPRAP M584: Set drive mapping
+REPRAP M585: Probe Tool
+REPRAP M586: Configure network protocols
+REPRAP M587: Store WiFi host network in list, or list stored networks
+REPRAP M588: Forget WiFi host network
+REPRAP M589: Configure access point parameters
+REPRAP M590: Report current tool type and index
+REPRAP M591: Configure filament monitoring
+REPRAP M592: Configure nonlinear extrusion
+REPRAP M593: Configure Dynamic Acceleration Adjustment
+REPRAP M594: Enter/Leave Height Following mode
+M600: Filament Change
+REPRAP M601: Pause print
+REPRAP M602: Resume print
+M603: Configure Filament Change
+REPRAP M603: Stop print
+M605: Dual Nozzle Mode
+REPRAP M650: Set peel move parameters
+REPRAP M651: execute peel move
+M665: Delta Configuration
+M665: SCARA Configuration
+M666: Set Delta endstop adjustments
+M666: Set dual endstop offsets
+REPRAP M667: Select CoreXY mode
+REPRAP M668: Set Z-offset compensations polynomial
+REPRAP M669: Set kinematics type and kinematics parameters
+REPRAP M670: Set IO port bit mapping
+REPRAP M671: Define positions of Z leadscrews or bed leveling screws
+REPRAP M672: Program Z probe
+REPRAP M673: Align plane on rotary axis
+REPRAP M674: Set Z to center point
+REPRAP M675: Find center of cavity
+REPRAP M700: Level plate
+M701: Load filament
+M702: Unload filament
+REPRAP M703: Configure Filament
+M710: Controller Fan settings
+REPRAP M750: Enable 3D scanner extension
+REPRAP M751: Register 3D scanner extension over USB
+REPRAP M752: Start 3D scan
+REPRAP M753: Cancel current 3D scanner action
+REPRAP M754: Calibrate 3D scanner
+REPRAP M755: Set alignment mode for 3D scanner
+REPRAP M756: Shutdown 3D scanner
+REPRAP M800: Fire start print procedure
+REPRAP M801: Fire end print procedure
+M851: XYZ Probe Offset
+M852: Bed Skew Compensation
+REPRAP M860 Wait for Probe Temperature
+REPRAP M861 Set Probe Thermal Compensation
+REPRAP M862: Print checking
+	REPRAP M862.1: Check nozzle diameter
+	REPRAP M862.2: Check model code
+	REPRAP M862.3: Model name
+	REPRAP M862.4: Firmware version
+	REPRAP M862.5: Gcode level
+
+M871: Probe temperature config
+REPRAP M876: Dialog handling
+REPRAP M890 Run User Gcode
+M900: Linear Advance Factor
+REPRAP M905: Set local date and time
+M906: TMC Motor Current
+M907: Set Motor Current
+M908: Set Trimpot Pins
+M909: DAC Print Values
+M910: Commit DAC to EEPROM
+M911: TMC OT Pre-Warn Condition
+M912: Clear TMC OT Pre-Warn
+M913: Set Hybrid Threshold Speed
+M914: TMC Bump Sensitivity
+M915: TMC Z axis calibration
+REPRAP M916: Resume print after power failure
+REPRAP M916: Set TMC2130 Stallguard sensitivity threshold
+REPRAP M917: Set motor standstill current reduction
+REPRAP M917: Set TMC2130 PWM amplitude offset (pwm_ampl)
+REPRAP M918: Configure direct-connect display
+REPRAP M918: Set TMC2130 PWM amplitude gradient (pwm_grad)
+M928: Start SD Logging
+REPRAP M929: Start/stop event logging to SD card
+REPRAP M950: Create heater, fan or GPIO/servo device
+REPRAP M951: Set height following mode parameters
+REPRAP M952: Set CAN expansion board address and/or normal data rate
+REPRAP M953: Set CAN-FD bus fast data rate
+REPRAP M995: Calibrate Touch Screen
+M997: Firmware update
+M999: STOP Restart
+M7219: MAX7219 Control
+T0-T1: Select Tool
+MarlinFW.Org
