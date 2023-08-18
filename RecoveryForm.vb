@@ -176,6 +176,15 @@ EHandler:
                     "G1 F2400 X" & .XHomeBox.Text & " Y" & .YHomeBox.Text & vbCrLf &
                     "G28 Z  ;Home Z"
             End If
+            Dim M82Line As String
+            Dim G92Line As String
+            If Not M83Box.Checked Then
+                M82Line = "M82 ;Absolute Extrusion"
+                G92Line = "G92 E" & CSng(.ELab.Text) - CSng(My.Settings.PrimeAmt) & " ;Set extruder -" & My.Settings.PrimeAmt & " prime"
+            Else
+                M82Line = "M83 ;Relative Extrusion"
+                G92Line = "G92 E" & 0 - CSng(My.Settings.PrimeAmt) & ";Set extruder"
+            End If
             EnderMainForm.TextBox1.Text =
                 "M21 ;Initialize SD card" & vbCrLf &
                 "M23 " & Trim(.FileLab.Text) & " ;DOS 8.3 FileName" & vbCrLf &
@@ -194,9 +203,9 @@ EHandler:
                 "M106 S" & Int((Val(.FanLab.Text) / 100) * 255) & " ;Fan" & vbCrLf &
                 "G0 F1200 Z" & Val(.ZLab.Text) + 10 & " ;Move the Z to restart height + 10" & vbCrLf &
                 "G0 F2400 X" & .XLab.Text & " Y" & .YLab.Text & " ;Move to XY restart location" & vbCrLf &
-                "G92 E" & CSng(.ELab.Text) - CSng(My.Settings.PrimeAmt) & " ;Set extruder -" & My.Settings.PrimeAmt & " prime" & vbCrLf &
+                G92Line & vbCrLf &
                 "G0 F300 Z" & .ZLab.Text & " ;Drop 10 to Resume Z" & vbCrLf &
-                "G0 F1200 E" & .ELab.Text & " ;Prime" & vbCrLf &
+                M82Line & vbCrLf &
                 "G0 F2400 ;Set Feed rate" & vbCrLf &
                 "M24 ;Resume"
         End With
@@ -212,6 +221,14 @@ EHandler:
         ElseIf Me.PrintFromByteBut.Checked = False Then
             Me.PrintFromByteBut.Text = "Print from Byte Location"
             Me.PrintFromByteBut.BackColor = Color.LightGreen
+        End If
+    End Sub
+
+    Private Sub M83Box_CheckedChanged(sender As Object, e As EventArgs) Handles M83Box.CheckedChanged
+        If M83Box.Checked Then
+            ELab.Text = "0"
+        Else
+            ELab.Text = EnderMainForm.PauseE.Text
         End If
     End Sub
 End Class

@@ -68,6 +68,7 @@ Partial Class RecoveryForm
         Me.Label16 = New System.Windows.Forms.Label()
         Me.SpecialHomeLocOpt = New System.Windows.Forms.RadioButton()
         Me.NormalHomeLocOpt = New System.Windows.Forms.RadioButton()
+        Me.M83Box = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -78,6 +79,7 @@ Partial Class RecoveryForm
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GroupBox1.Controls.Add(Me.M83Box)
         Me.GroupBox1.Controls.Add(Me.FileLab)
         Me.GroupBox1.Controls.Add(Me.ByteLab)
         Me.GroupBox1.Controls.Add(Me.FeedLab)
@@ -115,7 +117,7 @@ Partial Class RecoveryForm
         Me.ByteLab.BackColor = System.Drawing.SystemColors.Window
         Me.ByteLab.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ByteLab.ForeColor = System.Drawing.Color.Black
-        Me.ByteLab.Location = New System.Drawing.Point(64, 115)
+        Me.ByteLab.Location = New System.Drawing.Point(64, 112)
         Me.ByteLab.Name = "ByteLab"
         Me.ByteLab.Size = New System.Drawing.Size(143, 27)
         Me.ByteLab.TabIndex = 19
@@ -126,7 +128,7 @@ Partial Class RecoveryForm
         Me.FeedLab.BackColor = System.Drawing.SystemColors.Window
         Me.FeedLab.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FeedLab.ForeColor = System.Drawing.Color.Black
-        Me.FeedLab.Location = New System.Drawing.Point(64, 179)
+        Me.FeedLab.Location = New System.Drawing.Point(64, 173)
         Me.FeedLab.Name = "FeedLab"
         Me.FeedLab.Size = New System.Drawing.Size(143, 27)
         Me.FeedLab.TabIndex = 18
@@ -137,7 +139,7 @@ Partial Class RecoveryForm
         Me.FlowLab.BackColor = System.Drawing.SystemColors.Window
         Me.FlowLab.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FlowLab.ForeColor = System.Drawing.Color.Black
-        Me.FlowLab.Location = New System.Drawing.Point(62, 238)
+        Me.FlowLab.Location = New System.Drawing.Point(62, 229)
         Me.FlowLab.Name = "FlowLab"
         Me.FlowLab.Size = New System.Drawing.Size(143, 27)
         Me.FlowLab.TabIndex = 17
@@ -148,7 +150,7 @@ Partial Class RecoveryForm
         Me.BedLab.BackColor = System.Drawing.SystemColors.Window
         Me.BedLab.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BedLab.ForeColor = System.Drawing.Color.Black
-        Me.BedLab.Location = New System.Drawing.Point(64, 301)
+        Me.BedLab.Location = New System.Drawing.Point(64, 289)
         Me.BedLab.Name = "BedLab"
         Me.BedLab.Size = New System.Drawing.Size(143, 27)
         Me.BedLab.TabIndex = 16
@@ -159,7 +161,7 @@ Partial Class RecoveryForm
         Me.HotLab.BackColor = System.Drawing.SystemColors.Window
         Me.HotLab.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HotLab.ForeColor = System.Drawing.Color.Black
-        Me.HotLab.Location = New System.Drawing.Point(61, 372)
+        Me.HotLab.Location = New System.Drawing.Point(61, 357)
         Me.HotLab.Name = "HotLab"
         Me.HotLab.Size = New System.Drawing.Size(143, 27)
         Me.HotLab.TabIndex = 15
@@ -170,7 +172,7 @@ Partial Class RecoveryForm
         Me.FanLab.BackColor = System.Drawing.SystemColors.Window
         Me.FanLab.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FanLab.ForeColor = System.Drawing.Color.Black
-        Me.FanLab.Location = New System.Drawing.Point(61, 436)
+        Me.FanLab.Location = New System.Drawing.Point(61, 418)
         Me.FanLab.Name = "FanLab"
         Me.FanLab.Size = New System.Drawing.Size(143, 27)
         Me.FanLab.TabIndex = 14
@@ -179,7 +181,7 @@ Partial Class RecoveryForm
         'Label7
         '
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(53, 415)
+        Me.Label7.Location = New System.Drawing.Point(53, 397)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(169, 21)
         Me.Label7.TabIndex = 13
@@ -189,7 +191,7 @@ Partial Class RecoveryForm
         'Label6
         '
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(53, 347)
+        Me.Label6.Location = New System.Drawing.Point(53, 332)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(169, 21)
         Me.Label6.TabIndex = 11
@@ -199,7 +201,7 @@ Partial Class RecoveryForm
         'Label5
         '
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(53, 277)
+        Me.Label5.Location = New System.Drawing.Point(53, 265)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(169, 21)
         Me.Label5.TabIndex = 9
@@ -209,7 +211,7 @@ Partial Class RecoveryForm
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(53, 214)
+        Me.Label4.Location = New System.Drawing.Point(53, 205)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(169, 21)
         Me.Label4.TabIndex = 7
@@ -219,7 +221,7 @@ Partial Class RecoveryForm
         'Label3
         '
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(53, 155)
+        Me.Label3.Location = New System.Drawing.Point(53, 149)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(169, 21)
         Me.Label3.TabIndex = 5
@@ -229,7 +231,7 @@ Partial Class RecoveryForm
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(53, 90)
+        Me.Label2.Location = New System.Drawing.Point(53, 87)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(169, 21)
         Me.Label2.TabIndex = 3
@@ -562,6 +564,17 @@ Partial Class RecoveryForm
         Me.NormalHomeLocOpt.Text = "G28 Normal Home Location"
         Me.NormalHomeLocOpt.UseVisualStyleBackColor = True
         '
+        'M83Box
+        '
+        Me.M83Box.AutoSize = True
+        Me.M83Box.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.M83Box.Location = New System.Drawing.Point(33, 460)
+        Me.M83Box.Name = "M83Box"
+        Me.M83Box.Size = New System.Drawing.Size(184, 24)
+        Me.M83Box.TabIndex = 21
+        Me.M83Box.Text = "Relative Extrusion"
+        Me.M83Box.UseVisualStyleBackColor = True
+        '
         'RecoveryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -580,6 +593,7 @@ Partial Class RecoveryForm
         Me.Name = "RecoveryForm"
         Me.Text = "Print Recovery"
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -635,4 +649,5 @@ Partial Class RecoveryForm
     Friend WithEvents SpecialHomeLocOpt As RadioButton
     Friend WithEvents NormalHomeLocOpt As RadioButton
     Friend WithEvents NoHomeBut As RadioButton
+    Friend WithEvents M83Box As CheckBox
 End Class
